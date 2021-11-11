@@ -1,0 +1,53 @@
+﻿@model AssessmentI.Data.Entities.ImeiCar
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<i data-mdb-animation-start="onHover">
+    @Html.DisplayFor(x => Model.IMEI)
+</i>
+
+
+
+<tbody>
+    <tr>
+        
+        <th>
+            @Html.DisplayFor(x => Model.VehicleID)
+        </th>
+        <th>
+            @Html.DisplayFor(x => Model.CompanyID)
+        </th>
+    </tr>
+</tbody>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    IMEI CAR
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">This is the IMEI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <h2 id="testing">@Html.DisplayFor(x => Model.IMEI)</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script></script>
